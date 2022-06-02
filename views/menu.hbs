@@ -1,0 +1,110 @@
+<html>
+    <head>
+        {{!-- <link rel="stylesheet" href="../public/stylesheets/contacto.css"> --}}
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <style>
+            /* Indicar font-family, buscar fuente adecuada para esto */
+            body{
+                background: lightblue;
+                margin: 0;
+                padding: 0;
+            }
+            /* clase que contiene la foto y los enlaces a otras paginas */
+            .navbar{
+                background: darkcyan;
+                margin: 0;
+                padding: 5px;
+            }
+            /* clase de la caja que contiene el logotipo */
+            .logo{
+                width: 20%;
+                height: 5vh;
+            }
+            /* clase de la imagen del logotipo de la empresa o tienda */
+            .logotipo{
+                width: 100px;
+                height: 100px;
+            }
+            /* clase que contiene la lista desordenada de los enlaces*/
+            .menu{
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+            }
+            ul{
+                list-style: none;
+            }
+            /* clase para la lista de los enlaces */
+            .navegacion{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            a{
+                color: silver;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            /* clase que contiene todos los elementos dentro de la pagina y que no son el menu de navegacion */
+            .cuerpo_asis{
+                padding: 5px;
+            }
+            .formas_contacto h3{
+                font-size: 21px;
+            }
+            .formas_contacto li{
+                list-style: disc;
+                font-size: 18px;
+                margin-bottom: 10px;
+                margin-left: 25px;
+            }
+            /* clase de la caja que contiene todas las reseñas antiguas */
+            .caja_reses{
+                display: block;
+                align-items: center;
+                margin-left: 20%;
+            }
+            /* clase de la caja que contiene una reseña, es la misma clase para todas las reseñas */
+            .res{
+                display: flex;
+                margin-top: 20px;
+                padding: 15px;
+                width: 70%;
+                align-items: center;
+                border: solid 2px;
+            }
+            /* clase de la caja de comentarios, la cual contiene el texto del coemntario */
+            .comentario{
+                margin: 10px 15px;
+
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="" class="logotipo" alt="falta logo">
+            </div>
+            <div class="menu">
+                
+                <ul class="navegacion">
+                    <li><a href="inicio">INICIO</a></li>
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="vender">VENDER</a></li>
+                    <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="asistencia">SOPORTE</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>

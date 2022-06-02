@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="inicio_style.css"> -->
+        <style>
+            body{
+                background: lightblue;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar{
+                display: flex;
+                margin: 0;
+            }
+            .logo{
+                width: 20%;
+                height: 5vh;
+            }
+            .logotipo{
+                width: 100px;
+                height: 100px;
+            }
+            .menu{
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+            }
+            .navegacion{
+                display: flex;
+            }
+            ul{
+                list-style: none;
+            }
+            li{
+                font-size: 23px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .menu a{
+                text-decoration: none;
+                color: lightgrey;
+            }
+            /* clases asociadas a el cuerpo de la pagina de inicio */
+            .cuerpo_inicio{
+                margin-top: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                
+            }
+            .servicios{
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+            }
+            .servicio{
+                width: 33%;
+                margin: 5px 10px;
+                padding: 10px 10px;
+                border: solid 2px;
+                /* background: lightgrey; */
+                background: darkgrey;
+                color: rgb(0, 100, 100); /* color provisional*/
+            }
+            .servicio img{
+                height: 160px;
+            }
+            .servicio h3{
+                font-size: 20px;
+                letter-spacing: .7px;
+            }
+            .servicio p{
+                color: lightgoldenrodyellow;
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+
+            /* footer ul{} */
+            footer li{
+                margin: 7px;
+                list-style: disc;
+            }
+        </style>
+        {{!-- <link rel="stylesheet" href="../public/stylesheets/menu.css"> --}}
+    </head>
+    <body>
+        <p>prueba</p>
+        <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="" class="logotipo" alt="falta logo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <!-- <li><a href=""></a></li> -->
+                    <!-- <li><a href="inicio.html">INICIO</a></li> -->
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="vender">VENDER</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="asistencia">SOPORTE</a></li>
+                    <!-- Plantear diferencias entre mantener soporte englobando a asistencia
+                    o separarlos para por ejemplo tener dentro de soporte las reparaciones
+                    y dentro de asistencia la asistencia telematica y viceversa-->
+                    <li><a href="asistencia">ASISTENCIA</a></li>
+                    <!-- Diferenciar entre la idea inicial de soporte y 'Contacto' -->
+                    <!-- El soporte contiene las formas de asisitecia informatica y telefonica
+                    añadir formas rapidas de contactar al asistente, ya sea un nº de telefono o un chat, al cual acceder
+                    opciones principales: whatsapp o discord -->
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cuerpo_inicio">
+            <div class="servicios">
+                <div class="servicio">
+                    <img src="#" alt="asistencia tecnica" href="asistencia"> <!-- href="asistencia_tecnica" -->
+                    <h3>ASISTENCIA TECNICA GRATUITA PARA LOS CLIENTES</h3>
+                    <p>Asistimos a nuestros clientes con problemas técnicos o de cualquier tipo tengan con nuestros productos</p>
+                </div>
+                <div class="servicio">
+                    <img src="#" alt="asistencia fisica" href="asistencia"> <!-- href="reparaciones" -->
+                    <h3>SERVICIO DE REPARACION A DOMICILIO</h3>
+                    <p>Ofrecemos el servicio de reparacion a domicilio para nuestros productos, (el cliente puede especificar si enviar el producto a nuestra empresa o pedir la reparacion a domicilio)</p>
+                </div>
+                <div class="servicio">
+                    <img src="#" alt="vender"> <!-- href="tienda del cliente" -->
+                    <h3>SERVICIO DE VENTA DE PRODUCTOS POR PARTE DEL CLEINTE</h3>
+                    <p>El cliente puede vender productos propios en nuestra tienda, siempre y cuando los productos estén relacionados con la informática</p>
+                </div>
+            </div>
+            <div class="servicios">
+                <div class="servicio">
+                    <img src="#" alt="comprar productos" href="tienda"> 
+                    <h3>SERVICIO DE COMPRAVENTA DE PRODUCTOS INFORMÁTICOS</h3>
+                    <p>Ofrecemos diversos productos de informática a nuestros clientes, además de vender sistemas operativos</p>
+                </div>
+                <div class="servicio">
+                    <img src="#" alt="servicio de montado de equipos" href="asistencia">
+                    <h3>MONTAJE DE EQUIPOS INFORMÁTICOS</h3>
+                    <p>Los clientes pueden montar sus propios equipos informáticos, ya sean PC de sobremesa o portatiles, ayudamos en la medida de lo posible a nuestros clientes a la hora de montar el producto, ya sea usando videos u ofreciendo el servicio de montar nosotros mismos el producto y enviarlo a domicilio.</p>
+                </div>
+                <div class="servicio">
+                    <img src="#" alt="instalacion de sistemas operativos" href="instalaciones">
+                    <h3>SERVICIO DE INSTALACION DE SISTEMAS OPERATIVOS</h3>
+                    <p>Si compras todos los productos necesarios para montar un equipo y un sistemas operativo para instalarlo tras el montaje, puedes pedirnos que instalemos el sistema operativo por ti, o directamente que montemos todo el equipo incluyendo el sistema operativo</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="">Politica de privacidad</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Sobre la empresa</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </footer>
+        
+    </body>
+</html>

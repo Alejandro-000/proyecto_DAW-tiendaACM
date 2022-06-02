@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <style>
+            /* Indicar font-family, buscar fuente adecuada para esto */
+            body{
+                background: lightblue;
+                margin: 0;
+                padding: 0;
+            }
+            /* clase que contiene la foto y los enlaces a otras paginas */
+            .navbar{
+                background: darkcyan;
+                margin: 0;
+                padding: 5px;
+            }
+            /* clase de la caja que contiene el logotipo */
+            .logo{
+                width: 20%;
+                height: 5vh;
+            }
+            /* clase de la imagen del logotipo de la empresa o tienda */
+            .logotipo{
+                width: 100px;
+                height: 100px;
+            }
+            /* clase que contiene la lista desordenada de los enlaces*/
+            .menu{
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+            }
+            ul{
+                list-style: none;
+            }
+            /* clase para la lista de los enlaces */
+            .navegacion{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            a{
+                color: silver;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+
+            .cuerpo{
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 2.5rem 13rem;
+            }
+            .oferta{
+                /* width: 45rem; */
+                padding: .5rem;
+                background: white;
+                border-radius: 25px;
+                height: 109vh;
+            }
+            .oferta p{
+                margin-left: -8.7rem; /*poner margen izquierdo o cambiar el padding de .registro */
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            .oferta input, .oferta select{
+                width: 50%;
+                height: 30px;
+                font-size: 17px;
+                padding: 5px 10px;
+                border: solid 1px darkslategrey;
+                border-radius: 7px;
+            }
+            .oferta .envio{
+                width: 10rem;
+                height: 45px;
+            }
+            #aviso{
+                margin-top: -20px;
+                
+                color: red;
+                border-radius: 100%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="" class="logotipo" alt="falta logo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <li><a href="inicio">INICIO</a></li>
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="menu_botones">SOPORTE</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="cuerpo">
+                {{!-- el action del formulario es para decidir si envia al usuario a alguna pagina o algo así --}}
+                <form action="" method="POST" class="oferta">
+                    <h2>Ofrece tus propios productos</h2>
+                    <p>Nombre del producto a vender</p>
+                    <input type="text" name="nombre" autofocus>
+                    <p>Tipo de componente</p>
+                    <select name="tipo">
+                        <option></option>
+                        {{!-- comprobar cual de estas 3 opciones funciona. --}}
+                        {{!-- la opcion 1 consiste en permitir guardar el dato indicando el nombre en la opcion del select --}}
+                        {{!-- <option name="tipo" value="placa_base">Placa base</option> --}}
+                        {{!-- la option 2 consiste en asociar la 'opcion' al nombre del select --}}
+                        {{!-- <option for="tipo" value="placa_base">Placa base</option> --}}
+                        <option value="placa_base">Placa base</option>
+                        <option value="procesador">Procesador</option>
+                        <option value="RAM">Memoria RAM</option>
+                        <option value="fuente">Fuente de Alimentacion</option>
+                        <option value="HDD">Disco duro HDD</option>
+                        <option value="SSD">Disco duro SSD</option>
+                        <option value="grafica">Tarjeta Gráfica</option>
+                        <option value="carcasa">Carcasa del equipo</option>
+                        <option value="CD">Lector de CD</option>
+                        <option value="ventilador">Ventilador para el Procesador</option>
+                        <option value="ventilador">Ventilador Auxiliar</option>
+                        <option value="pantalla">Pantalla</option>
+                        <option value="raton">Raton</option>
+                    </select>
+                    <p>Formato del equipo al que pertenece</p>
+                    <select name="formato">
+                        <option></option>
+                        <option value="torre">Torre</option>
+                        <option value="portatil">Portatil</option>
+                    </select>
+                    <p>Marca del producto</p>
+                    <input type="text" name="marca">
+                    <p>Precio al que vender el producto</p>
+                    <input type="text" name="precio">
+                    <p>Descripcion del producto</p>
+                    <input type="text" name="descripcion">
+                    <p>Especificaciones del producto en cuestien, si tiene</p>
+                    <input type="text" name="especificaciones" autofocus>
+                    <p>URL o Foto del producto</p>
+                    {{!-- investigar lo de cargar el fichero, si tenemos tiempo --}}
+                    <input type="text" name="foto" placeholder="url de la imagen" autofocus>
+                    <p></p>
+                    <input type="submit" value="Enviar" onclick="guardar_producto()" class="envio">
+                </form>
+                <!-- copiar el formulario de la aplicacion usada para el examen -->
+            </div>
+
+            
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

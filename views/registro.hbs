@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <style>
+            /* Indicar font-family, buscar fuente adecuada para esto */
+            body{
+                background: lightblue;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar{
+                background: darkcyan;
+                margin: 0;
+            }
+            .logo{
+                width: 20%;
+                height: 5vh;
+            }
+            /* clase de la imagen del logotipo de la empresa o tienda */
+            .logotipo{
+                width: 100px;
+                height: 100px;
+            }
+            .menu{
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+            }
+            .navegacion{
+                display: flex;
+            }
+            ul{
+                list-style: none;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+
+            }
+            a{
+                color: silver;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .cuerpo{
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 2.5rem 13rem;
+            }
+            .registro{
+                /* width: 45rem; */
+                padding: .5rem;
+                background: white;
+                border-radius: 25px;
+                height: 73.5vh;
+            }
+            .registro p{
+                margin-left: -8.7rem; /*poner margen izquierdo o cambiar el padding de .registro */
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            .registro input{
+                width: 50%;
+                height: 30px;
+                font-size: 17px;
+                padding: 5px 10px;
+                border: solid 1px darkslategrey;
+                border-radius: 7px;
+            }
+            .registro .envio{
+                width: 10rem;
+                height: 45px;
+            }
+            #aviso{
+                margin-top: -20px;
+                
+                color: red;
+                border-radius: 100%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="" alt="falta logo" class="logotipo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <li><a href="inicio">INCIO</a></li>
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="vender">VENDER</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="asistencia">SOPORTE</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cuerpo">
+            <!-- <form action="" method="GET" class="registro"> -->
+            <div class="registro">
+                <h2>Registrar Usuario</h2>
+                <p>Nombre y apellidos</p>
+                <input type="text" id="nom_ape" name="nom_ape"> <!--hacer un split o preguntar por los datos por separado-->
+                <p>Nombre Usuario</p>
+                <input type="text" id="user" name="user">
+                <p>Correo Electrónico</p>
+                <input type="email" id="mail" name="mail">
+                <p>Contraseña</p>
+                <input type="password" id="contra" name="contra">
+                <p>Repetir Contraseña</p>
+                <input type="password" id="repe_contra" name="repe_contra">
+                <p></p>
+                <input type="submit" value="Enviar" onclick="user_registrado(recopilar())" class="envio">
+            </div>
+            <!-- </form> -->
+            <p id="aviso"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
