@@ -157,8 +157,8 @@
         </div>
         
         <button class="cargar" onclick="vermenu()">Ver Menú de ayuda</button>
-        <div class="cuerpo">
-            <div class="izquierda listaGenero" style="border: solid 2px;">
+        <form class="cuerpo" method="post">
+            <div class="izquierda listaGenero">
                 <div style="margin: 10px;">
                     <h2>Filtrar Productos</h2>
                         <select id="filtro_eq_com" onchange="filtrar()">
@@ -183,12 +183,12 @@
                         <p></p>
                 </div>
             </div>
-            <div class="medio listaProd" id="listaProd" style="border: solid 2px;">
+            <div class="medio listaProd" id="listaProd">
             <!-- sustituir boton y codigo java por bucle for en hbs -->
                 {{!-- <button id="carro" class="carro" onclick="prueba()">Añadir al carro</button> --}}
                 <!-- Añadir el evento del boton añadir al carro dentro de las imagenes tipo icono dentro del div del producto -->
             </div>
-            <div class="derecha menuOpcional" id="menuOpcional" style="border: solid 2px;">
+            <div class="derecha menuOpcional" id="menuOpcional">
                 <ul class="opciones" id="lista"><h3>Componentes</h3>
                     <label><input type="checkbox" id="placa_base" disabled>Placa Base</label>
                     <label><input type="checkbox" id="procesador" disabled>Procesador</label>
@@ -204,7 +204,7 @@
                     <label><input type="checkbox" id="raton" disabled>Ratón (solo torre)</label>
                 </ul>
             </div>
-        </div>
+        </form>
 
         <script src="javascripts/script.js"></script>
         <script src="javascripts/buscar.js"></script>

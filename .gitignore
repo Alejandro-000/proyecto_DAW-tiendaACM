@@ -1,10 +1,6 @@
 /node_modules
 *.txt
-
 /nuevo
-/partes
-
-
 .env
 /views/servicios
 /routes/*n.js

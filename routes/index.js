@@ -17,6 +17,10 @@ router.get('/tienda', function(req, res, next) {
 });
 
 router.post('/tienda', function(req, res, next) {
+  res.redirect('producto');
+})
+
+router.get('/producto', function(req, res, next) {
   res.render('producto');
 })
 
@@ -27,6 +31,10 @@ router.get('/vender', function(req, res, next) {
 router.get('/ini_ses', function(req, res, next) {
   res.render('ini_ses');
 });
+
+router.post('/ini_ses', function(req, res, next) {
+  res.redirect('tienda');
+})
 
 router.get('/registro', function(req, res, next) {
   res.render('registro');
@@ -44,10 +52,13 @@ router.get('/reparaciones', function (req, res, next) {
   res.render('reparaciones');
 });
 
+router.get('/instalaciones', function(req, res, next) {
+  res.render('instalaciones');
+});
 
-// router.get('/instalaciones', function(req, res, next) {
-//   res.render('instalaciones');
-// });
+router.get('/montaje', function(req, res, next) {
+  res.render('montaje');
+});
 
 router.get('/contacto', function(req, res, next) {
   res.render('contacto');

@@ -101,19 +101,19 @@ app.use('/users', usersRouter);
 
 /************ (propias) rutas propias *************/
 // ruta encargada de la navegacion de toda la pagina, usada para navegar de un lado a otro
-app.use('/navegacion', navegacionRouter);
+    // app.use('/navegacion', navegacionRouter);
 // ruta a .js encargado de los metodos de los formularios para la asistencia y reparaciones:
 // paginas: asistencia.hbs, reparaciones.hbs
-app.use('/asistencia', asistenciaRouter);
+    // app.use('/asistencia', asistenciaRouter);
 // ruta a .js encargado de los metodos de los formularios para los usuarios:
 //paginas: ini_ses.hbs, registro.hbs, contacto.hbs, posiblemente menu_usu.hbs
-app.use('/sesion', sesionRouter);
+    // app.use('/sesion', sesionRouter);
 // ruta a .js para formularios de pagos:
 //paginas: transacciones.hbs (comprobar si añadir mas paginas para las transacciones)
-app.use('/transaccion', transaccionRouter);
+    // app.use('/transaccion', transaccionRouter);
 // ruta a .js encargado de los metodos para vistas asociadas a tienda y demas:
 //paginas: tienda.hbs, producto.hbs, vender.hbs, 
-app.use('/tienda', tiendaRouter);
+    // app.use('/tienda', tiendaRouter);
 
 // catch 404 and forward to error handler
 //personalizar pagina error 404.hbs

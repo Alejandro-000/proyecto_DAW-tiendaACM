@@ -7,32 +7,7 @@
             tener en cuenta eso a la hora de cambiar el tamaño de la ventana o pantalla
             */
 
-            body{
-                background: lightblue;
-                margin: 0;
-                padding: 0;
-            }
-            .navbar{
-                background: darkcyan;
-                margin: 0;
-            }
-            .logo{
-                width: 20%;
-                height: 5vh;
-            }
-            /* clase de la imagen del logotipo de la empresa o tienda */
-            .logotipo{
-                width: 100px;
-                height: 100px;
-            }
-            .menu{
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-            }
-            .navegacion{
-                display: flex;
-            }
+            
             .search{
                 border-radius: 25px;
                 width: 100%;
@@ -185,7 +160,8 @@
                 background: black;
                 color: white;
                 font-size: 30px;
-                width: 50px;
+                padding-left: 10px;
+                width: 80px;
                 margin: 0px 10px;
                 initial-value: 2;
             }
@@ -199,7 +175,7 @@
     <body>
         <div class="navbar" style="background: darkcyan;">
             <div class="logo">
-                <img src="" alt="falta logo" class="logotipo">
+                <img src="images/logo.png" alt="falta logo" class="logotipo">
             </div>
             <div class="menu">
                 <ul class="navegacion">
@@ -213,48 +189,9 @@
                 </ul>
             </div>
         </div>
-        <div class="search">
-            <div class="recuadro" style="display: flex;">
-                <i></i>
-                <input type="text" id="buscador" autofocus>
-                <button class="buscar" onclick="buscando()">Buscar</button>
-            </div>
-        </div>
-        <button class="cargar" onclick="vermenu(), comprobaciones()">Ver Menú</button>
         <div class="cuerpo">
-            <div class="izquierda listaGenero" style="border: solid 2px;">
-                <div style="margin: 10px;">
-                    <summary>Torres
-                        <select id="">
-                            <option value="0">equipos</option>
-                            <option value="1">componentes</option>
-                        </select>
-                </summary>
-                    <summary>Portatiles
-                        <select id="">
-                            <option value="0">equipos</option>
-                            <option value="1">componentes</option>
-                        </select>
-                    </summary>
-                </div>
-            </div>
-            <div class="derecha menuOpcional" id="menuOpcional" style="border: solid 2px;">
-                <ul class="opciones" id="lista"><h3>Componentes</h3>
-                    <label><input type="checkbox" id="placa_base">Placa Base</label>
-                    <label><input type="checkbox" id="procesador">Procesador</label>
-                    <label><input type="checkbox" id="RAM">Memoria RAM</label>
-                    <label><input type="checkbox" id="fuente">Fuente de alimentación</label>
-                    <label><input type="checkbox" id="HDD">Disco Duro HDD</label>
-                    <label><input type="checkbox" id="SSD">Disco Duro SSD</label>
-                    <label><input type="checkbox" id="grafica">Tarjeta Gráfica</label>
-                    <label><input type="checkbox" id="carcasa">Carcasa</label>
-                    <label><input type="checkbox" id="CD">Lector CD (opcional)</label>
-                    <label><input type="checkbox" id="ventilador">Ventilador Auxiliar (opcional)</label>
-                    <label><input type="checkbox" id="pantalla">Pantalla (solo torre)</label>
-                    <label><input type="checkbox" id="raton">Ratón (solo torre)</label>
-                </ul>
-            </div>
-            <div class="menu_compra" onmouseover="comprobaciones()">
+            <div class="izquierda listaGenero"></div>
+            <div class="menu_compra">
                 <div class="foto">
                     <img src="#" alt="foto ampliada">
                 </div>
@@ -264,16 +201,16 @@
                     <p>Descripcion del producto</p>
                     <p></p>
                     <div class="contador">
-                        <h1 onclick="subir()"><</h1>
+                        <h1 onclick="bajar()">-</h1>
                         <input type="number" id="cantidad" value="1">
-                        <h1 onclick="bajar()">></h1>
+                        <h1 onclick="subir()">+</h1>
                     </div>
                 </div>
             </div>
             
         </div>
 
-        <script src="javascript/script.js"></script>
-        <script src="javascript/buscar.js"></script>
+        <script src="javascripts/script.js"></script>
+        <script src="javascripts/buscar.js"></script>
     </body>
 </html>

@@ -1,1 +1,101 @@
 {{!-- reparaciones tipo formulario --}}
+<html>
+    <head>
+        <style>
+            /* clase para la lista de los enlaces */
+            .navegacion{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            a{
+                color: silver;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+
+            .cuerpo{
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 2.5rem 13rem;
+            }
+            .oferta{
+                /* width: 45rem; */
+                padding: .5rem;
+                background: white;
+                border-radius: 25px;
+                height: 109vh;
+            }
+            .oferta p{
+                margin-left: -8.7rem; /*poner margen izquierdo o cambiar el padding de .registro */
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            .oferta input, .oferta select{
+                width: 50%;
+                height: 30px;
+                font-size: 17px;
+                padding: 5px 10px;
+                border: solid 1px darkslategrey;
+                border-radius: 7px;
+            }
+            .oferta .envio{
+                width: 10rem;
+                height: 45px;
+            }
+            textarea{
+                columns: 50;
+                rows: 30;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+            <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="images/logo.png" alt="falta logo" class="logotipo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <li><a href="inicio">INCIO</a></li>
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="vender">VENDER</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="soporte">SOPORTE</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cuerpo">
+                {{!-- el action del formulario es para decidir si envia al usuario a alguna pagina o algo así --}}
+                <form action="" method="POST" class="oferta">
+                    <h2>Informe de pedido de reparación</h2>
+                    <p>Descripción</p>
+                    <textarea name="descrip" id="descripcion" cols="55" rows="5" placeholder="descripción del problema en el equipo o componente"></textarea>
+                    <p>Prioridad por parte del cliente</p>
+                    <select name="prioridad">
+                        <option></option>
+                        <option value="urgente">Urgente</option>
+                        <option value="pri">Prioritario</option>
+                        <option value="no_pri">No prioritario</option>
+                    </select>
+                    <p>Modelo del prodcuto a reparar</p>
+                    <input type="text" name="marca">
+                    <p></p>
+                    <input type="submit" value="Enviar" class="envio">
+                    {{!-- <input type="submit" value="Enviar" onclick="mandar_informe()" class="envio"> --}}
+                </form>
+ 
+            </div>
+        </div>
+
+    </body>
+</html>

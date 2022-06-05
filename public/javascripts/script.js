@@ -74,7 +74,7 @@ generar = () => {
                 const listado = document.getElementById('listaProd')
                 const div = document.createElement('div')
                 const foto = document.createElement('img')
-                const icono = document.createElement('i')
+                
                 const nombre = document.createElement('h3')
                 const precio = document.createElement('h3')
                 const descripcion = document.createElement('p')
@@ -82,18 +82,18 @@ generar = () => {
                 // añadiremos un boton cuando se este cargando la pagina, dicho boton tendra su funcion correspondiente
                 div.className = "producto"
                 foto.alt = 'sin foto '
-                icono.className = 'icono'
-                icono.alt = 'añadir al carro'
-                boton.type = "button"
-                boton.value= "comprar"+todosProductos[i].tipo_comp
-                boton.placeholder= todosProductos[i].nombre
+                
+                
+                boton.value= "comprar"//+todosProductos[i].tipo_comp
+                
                 boton.id = 'botonCompra'
+                boton.type = 'submit'
                 nombre.innerHTML = todosProductos[i].nombre
                 precio.innerHTML = todosProductos[i].precio+'€'
                 descripcion.className = 'descrip'
                 descripcion.innerHTML = todosProductos[i].descripcion
                 listado.append(div)
-                div.append(foto, icono, nombre, precio, descripcion, boton)
+                div.append(foto, nombre, precio, descripcion, boton)
                 
                 // añadimos los eventos a todos los putos botones
                 boton.addEventListener('click', compra, false)
@@ -129,10 +129,9 @@ try{
     console.log('fallo debido a que se ejecuta una funcion por defecto en la ejecucion de la pagina, la cual puede dar errores, el error está explicado en la ejecucion de la funcion.')
     console.log(e)
 }
-// document.addEventListener('DOMContentLoaded', comprobaciones, true)
 
 
-
+///// EJEMPLO DE COMO AÑADIR UN EVENTO PARA QUE SE EJECUTE SIN NECESIDAD DE QUE UN BOTON LO LLAME DESDE EL HTML
 // document.addEventListener("click", cargar, false)
 
 // function llamar(){
@@ -333,17 +332,15 @@ ver_res = () => {
     
     for (i = 0 ; i<3 ; i++) {
         const bloque = document.createElement('div')
-        const foto = document.createElement('img')
         const comentario = document.createElement('div')
         const user = document.createElement('h4')
         const comen = document.createElement('p')
-        foto.alt = 'falta foto'
         bloque.className = 'res'
         comentario.className = 'comentario'
         user.innerHTML = 'Juan Pepe Montserrat'
         comen.innerHTML = 'intenté montar mi propio PC gaming, pero no salio como esperaba'
         reses.append(bloque)
-        bloque.append(foto, comentario)
+        bloque.append(comentario)
         comentario.append(user, comen)
     }
 }

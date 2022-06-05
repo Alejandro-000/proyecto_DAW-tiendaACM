@@ -69,8 +69,8 @@
             </div>
         </div>
         <div class="cuerpo">
-            <!-- <form action="" method="GET" class="registro"> -->
-            <div class="registro">
+            <form action="" method="POST" class="registro">
+            {{!-- <div class="registro"> --}}
                 <h2>Iniciar Sesión</h2>
                 <p>Usuario</p>
                 <input type="text" id="user" name="user">
@@ -78,8 +78,8 @@
                 <input type="password" id="contra" name="contra">
                 <p></p>
                 <input type="submit" value="Enviar" onclick="inicio_sesion()" class="envio">
-            </div>
-            <!-- </form> -->
+            {{!-- </div> --}}
+            </form>
             <p id="aviso"></p>
         </div>
         <script src="javascripts/script.js"></script>
