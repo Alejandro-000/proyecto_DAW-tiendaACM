@@ -67,38 +67,43 @@ iniciar_sesion = () => {} //sustituible por inicio_sesion()
 /// FUNCIONES ASOCIADAS A tienda.html ///
 // const boton = document.createElement('input')
 generar = () => {
-    if (!document.getElementById('botonCompra')){
-        for (i=0 ; i<todosProductos.length ; i++){
-            // sacar esto de la funcion para que se ejecute por defecto y asi no podemos generar multiples elementos iguales
-            const listado = document.getElementById('listaProd')
-            const div = document.createElement('div')
-            const foto = document.createElement('img')
-            const icono = document.createElement('i')
-            const nombre = document.createElement('h3')
-            const precio = document.createElement('h3')
-            const descripcion = document.createElement('p')
-            const boton = document.createElement('input')
-            // añadiremos un boton cuando se este cargando la pagina, dicho boton tendra su funcion correspondiente
-            div.className = "producto"
-            foto.alt = 'sin foto '
-            icono.className = 'icono'
-            icono.alt = 'añadir al carro'
-            boton.type = "button"
-            boton.value= "comprar"+todosProductos[i].tipo_comp
-            boton.placeholder= todosProductos[i].nombre
-            boton.id = 'botonCompra'
-            nombre.innerHTML = todosProductos[i].nombre
-            precio.innerHTML = todosProductos[i].precio+'€'
-            descripcion.className = 'descrip'
-            descripcion.innerHTML = todosProductos[i].descripcion
-            listado.append(div)
-            div.append(foto, icono, nombre, precio, descripcion, boton)
-            
-            // añadimos los eventos a todos los putos botones
-            boton.addEventListener('click', compra, false)
+    try{ 
+        if (!document.getElementById('botonCompra')){
+            for (i=0 ; i<todosProductos.length ; i++){
+                // sacar esto de la funcion para que se ejecute por defecto y asi no podemos generar multiples elementos iguales
+                const listado = document.getElementById('listaProd')
+                const div = document.createElement('div')
+                const foto = document.createElement('img')
+                const icono = document.createElement('i')
+                const nombre = document.createElement('h3')
+                const precio = document.createElement('h3')
+                const descripcion = document.createElement('p')
+                const boton = document.createElement('input')
+                // añadiremos un boton cuando se este cargando la pagina, dicho boton tendra su funcion correspondiente
+                div.className = "producto"
+                foto.alt = 'sin foto '
+                icono.className = 'icono'
+                icono.alt = 'añadir al carro'
+                boton.type = "button"
+                boton.value= "comprar"+todosProductos[i].tipo_comp
+                boton.placeholder= todosProductos[i].nombre
+                boton.id = 'botonCompra'
+                nombre.innerHTML = todosProductos[i].nombre
+                precio.innerHTML = todosProductos[i].precio+'€'
+                descripcion.className = 'descrip'
+                descripcion.innerHTML = todosProductos[i].descripcion
+                listado.append(div)
+                div.append(foto, icono, nombre, precio, descripcion, boton)
+                
+                // añadimos los eventos a todos los putos botones
+                boton.addEventListener('click', compra, false)
+            }
+        } else {
+            console.log('ya esta cargado')
         }
-    } else {
-        console.log('ya esta cargado')
+    } catch (e) {
+        console.log('no se puede generar la lista de productos, compruba que existen los ids dentro del hbs')
+        console.log(e)
     }
 }
 
@@ -118,8 +123,12 @@ function addeventos(){
     // botones.addEventListener('click', prueba, false)
 }
 
-document.addEventListener('DOMContentLoaded', generar, true)
-
+try{
+    document.addEventListener('DOMContentLoaded', generar, true)
+} catch (e) {
+    console.log('fallo debido a que se ejecuta una funcion por defecto en la ejecucion de la pagina, la cual puede dar errores, el error está explicado en la ejecucion de la funcion')
+    console.log(e)
+}
 // document.addEventListener('DOMContentLoaded', comprobaciones, true)
 
 

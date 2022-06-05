@@ -114,25 +114,33 @@ comprobaciones = () => {
 
 }
 
-document.addEventListener('DOMContentLoaded', comprobaciones, true)
-
+try{
+    document.addEventListener('DOMContentLoaded', comprobaciones, true)
+} catch (e) {
+    console.log('fallo debido a que se intenta asignar el atributo checked a una etiqueta on un id que no existe en esta pagina')
+    console.log(e)
+}
 /// CONSULTAS SQL PARA EL FUNCIONAMIENTO DE LA PAGINA WEB
 //--'SELECT * FROM componentes, equipos, prod_clientes';
 //--'SELECT * FROM componentes, equipos, prod_clientes LIKE '+palabra+';';
 //--'SELECT COUNT(c.nombre, e.nombre, p.nombre) FROM componentes c, equipos e, prod_clientes p;';
 
 /// condicional para la consulta de busqueda de productos:
-const palabra_buscar = document.getElementById('buscador').value
-const resultados = 'SELECT * FROM componentes c, equipos e, prod_clientes p WHERE c.nombre LIKE '+palabra+', e.nombre LIKE '+palabra+', p.nombre LIKE '+palabra+';';
-if (resultados.length > 0) {
-    console.log('pasar el resultado de la consulta a la web para actualizar la pagina '+resultados+'(comprobar como llamar a todos los elementos de las tablas si las filas pertenecen a distintas tablas y tienen distintos nombres)');
-    //comprobar como queda el resultado que devuelve la consulta en caso de que la base de datos contenga elementos
-} else {
-    console.log('no es que la base de datos esté vacia, sino que la palabra a buscar no coincide con ningún nombre dentro de la base de datos')
-    const productos = 'SELECT * FROM componentes c, equipos e, prod_clientes p;';
-    productos.findAll(palabra)
+try{
+    const palabra_buscar = document.getElementById('buscador').value
+    const resultados = 'SELECT * FROM componentes c, equipos e, prod_clientes p WHERE c.nombre LIKE '+palabra+', e.nombre LIKE '+palabra+', p.nombre LIKE '+palabra+';';
+    if (resultados.length > 0) {
+        console.log('pasar el resultado de la consulta a la web para actualizar la pagina '+resultados+'(comprobar como llamar a todos los elementos de las tablas si las filas pertenecen a distintas tablas y tienen distintos nombres)');
+        //comprobar como queda el resultado que devuelve la consulta en caso de que la base de datos contenga elementos
+    } else {
+        console.log('no es que la base de datos esté vacia, sino que la palabra a buscar no coincide con ningún nombre dentro de la base de datos')
+        const productos = 'SELECT * FROM componentes c, equipos e, prod_clientes p;';
+        productos.findAll(palabra)
+    }
+} catch (e) {
+    console.log('funcion sin terminar, puede tener fallos a la hora de buscar palabras en el buscador de la tienda')
+    console.log(e)
 }
-
 
 filtrar = () => {
     var filtro_general = document.getElementById('filtro_eq_com')
