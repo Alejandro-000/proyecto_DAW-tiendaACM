@@ -21,7 +21,7 @@
             /* clase de la imagen del logotipo de la empresa o tienda */
             .logotipo{
                 width: 100px;
-                height: 100px;
+                height: 90px;
             }
             /* clase que contiene la lista desordenada de los enlaces*/
             .menu{
@@ -81,32 +81,26 @@
                 width: 50px;
                 height: 50px;
             }
-
-
             .menu_botones{
                 height: 85.4vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: palegreen;
+/*                background: rgb(137, 252, 176);*/
             }
             button{
                 width: 200px;
                 font-size: 25px;
-                color: blue;
-                background: crimson;
+                background: darkgreen;
+                height: 70px;
+                color: lightblue;
             }
-            .menu_telematico{
-                display: none;
-            }
-            .menu_fisico{
-                display: none;
-            }
+            
 
         </style>
     </head>
     <body>
-        <div class="navbar" style="background: darkcyan;">
+        <div class="navbar" >
             <div class="logo">
                 <img src="" class="logotipo" alt="falta logo">
             </div>
@@ -115,8 +109,8 @@
                     <li><a href="inicio">INICIO</a></li>
                     <li><a href="tienda">TIENDA</a></li>
                     <li><a href="vender">VENDER</a></li>
-                    <li><a href="ini_ses">INICIAR SESION</a></li>
                     <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
                     <li><a href="contacto">CONTACTO</a></li>
                 </ul>
             </div>
@@ -128,21 +122,13 @@
     </head>
     <body>
         <div id="menu_botones" class="menu_botones">
-            <button onclick="ver_menu_telematico()">Asistencia Telemática</button>
-            <button onclick="ver_menu_fisico()">Asistencia Física</button>    
+            
+            <a href="asistencia"><button>Asistencia Telemática</button></a>
+            
+            <a href="reparaciones"><button>Asistencia Física</button></a>
         </div>
-        <div id="menu_telematico" class="menu_telematico">
-            <div>
-                <p>contenido telematico</p>
-                <button onclick="ver_menu_botones()">Volver al menú de selección</button>
-            </div>
-        </div>
-        <div id="menu_fisico" class="menu_fisico">
-            <div>
-                <p>Contenido físico</p>
-                <button onclick="ver_menu_botones()">Volver al menú de selección</button>
-            </div>
-        </div>
-        <script src="../public/javascript/script.js"></script>
+        
+        
+        
     </body>
 </html>

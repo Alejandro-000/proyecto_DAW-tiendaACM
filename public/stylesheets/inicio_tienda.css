@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  margin: 0;
+}
+
+/*.logo 
+ *  width: 20% 
+ *  height: 5vh 
+ * */
+.logotipo {
+  margin-top: 5px;
+  width: 100px;
+  height: 90px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.navegacion {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 23px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+/* clases asociadas a el cuerpo de la pagina de inicio */
+.cuerpo_inicio {
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.servicio {
+  width: 33%;
+  margin: 5px 10px;
+  padding: 10px 10px;
+  border: solid 2px;
+  /* background: lightgrey  */
+  background: darkgrey;
+  color: rgb(0, 100, 100);
+}
+.servicio img {
+  height: 160px;
+}
+.servicio h3 {
+  font-size: 20px;
+  letter-spacing: 0.7px;
+}
+.servicio p {
+  color: lightgoldenrodyellow;
+  font-size: 17px;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=inicio_tienda.css.map */

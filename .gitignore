@@ -3,12 +3,12 @@
 
 /nuevo
 /partes
-/views/layouts
-/views/partes
+
+
 .env
 /views/servicios
 /routes/*n.js
 /routes/*a.js
-/public
+
 /baseDatos/*BD.js
 /lib

@@ -1,37 +1,6 @@
 <html>
     <head>
         <style>
-            /* Indicar font-family, buscar fuente adecuada para esto */
-            body{
-                background: lightblue;
-                margin: 0;
-                padding: 0;
-            }
-            /* clase que contiene la foto y los enlaces a otras paginas */
-            .navbar{
-                background: darkcyan;
-                margin: 0;
-                padding: 5px;
-            }
-            /* clase de la caja que contiene el logotipo */
-            .logo{
-                width: 20%;
-                height: 5vh;
-            }
-            /* clase de la imagen del logotipo de la empresa o tienda */
-            .logotipo{
-                width: 100px;
-                height: 100px;
-            }
-            /* clase que contiene la lista desordenada de los enlaces*/
-            .menu{
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-            }
-            ul{
-                list-style: none;
-            }
             /* clase para la lista de los enlaces */
             .navegacion{
                 display: flex;
@@ -92,15 +61,15 @@
     <body>
         <div class="navbar" style="background: darkcyan;">
             <div class="logo">
-                <img src="" class="logotipo" alt="falta logo">
+                <img src="images/logo.png" class="logotipo" alt="falta logo">
             </div>
             <div class="menu">
                 <ul class="navegacion">
                     <li><a href="inicio">INICIO</a></li>
                     <li><a href="tienda">TIENDA</a></li>
-                    <li><a href="ini_ses">INICIAR SESION</a></li>
                     <li><a href="registro">REGISTRARSE</a></li>
-                    <li><a href="menu_botones">SOPORTE</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="soporte">SOPORTE</a></li>
                     <li><a href="contacto">CONTACTO</a></li>
                 </ul>
             </div>
@@ -110,7 +79,7 @@
                 {{!-- el action del formulario es para decidir si envia al usuario a alguna pagina o algo así --}}
                 <form action="" method="POST" class="oferta">
                     <h2>Ofrece tus propios productos</h2>
-                    <p>Nombre del producto a vender</p>
+                    <p>Nombre</p>
                     <input type="text" name="nombre" autofocus>
                     <p>Tipo de componente</p>
                     <select name="tipo">
@@ -134,21 +103,21 @@
                         <option value="pantalla">Pantalla</option>
                         <option value="raton">Raton</option>
                     </select>
-                    <p>Formato del equipo al que pertenece</p>
+                    <p>Formato del equipo</p>
                     <select name="formato">
                         <option></option>
                         <option value="torre">Torre</option>
                         <option value="portatil">Portatil</option>
                     </select>
-                    <p>Marca del producto</p>
+                    <p>Marca</p>
                     <input type="text" name="marca">
-                    <p>Precio al que vender el producto</p>
+                    <p>Precio</p>
                     <input type="text" name="precio">
-                    <p>Descripcion del producto</p>
+                    <p>Descripcion</p>
                     <input type="text" name="descripcion">
-                    <p>Especificaciones del producto en cuestien, si tiene</p>
+                    <p>Especificaciones, si tiene</p>
                     <input type="text" name="especificaciones" autofocus>
-                    <p>URL o Foto del producto</p>
+                    <p>URL o Foto</p>
                     {{!-- investigar lo de cargar el fichero, si tenemos tiempo --}}
                     <input type="text" name="foto" placeholder="url de la imagen" autofocus>
                     <p></p>
@@ -156,10 +125,6 @@
                 </form>
                 <!-- copiar el formulario de la aplicacion usada para el examen -->
             </div>
-
-            
         </div>
-
-        <script src="script.js"></script>
     </body>
 </html>

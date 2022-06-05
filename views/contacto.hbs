@@ -1,39 +1,6 @@
 <html>
     <head>
-        {{!-- <link rel="stylesheet" href="../public/stylesheets/contacto.css"> --}}
-        <link rel="stylesheet" href="stylesheets/style.css">
         <style>
-            /* Indicar font-family, buscar fuente adecuada para esto */
-            body{
-                background: lightblue;
-                margin: 0;
-                padding: 0;
-            }
-            /* clase que contiene la foto y los enlaces a otras paginas */
-            .navbar{
-                background: darkcyan;
-                margin: 0;
-                padding: 5px;
-            }
-            /* clase de la caja que contiene el logotipo */
-            .logo{
-                width: 20%;
-                height: 5vh;
-            }
-            /* clase de la imagen del logotipo de la empresa o tienda */
-            .logotipo{
-                width: 100px;
-                height: 100px;
-            }
-            /* clase que contiene la lista desordenada de los enlaces*/
-            .menu{
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-            }
-            ul{
-                list-style: none;
-            }
             /* clase para la lista de los enlaces */
             .navegacion{
                 display: flex;
@@ -91,7 +58,7 @@
     <body>
         <div class="navbar" style="background: darkcyan;">
             <div class="logo">
-                <img src="" class="logotipo" alt="falta logo">
+                <img src="images/logo.png" class="logotipo" alt="falta logo">
             </div>
             <div class="menu">
                 <ul class="navegacion">
@@ -100,7 +67,7 @@
                     <li><a href="vender">VENDER</a></li>
                     <li><a href="registro">REGISTRARSE</a></li>
                     <li><a href="ini_ses">INICIAR SESION</a></li>
-                    <li><a href="asistencia">SOPORTE</a></li>
+                    <li><a href="soporte">SOPORTE</a></li>
                 </ul>
             </div>
         </div>
@@ -111,11 +78,9 @@
                 y si mantener los comentarios en la misma ventana o no -->
                 <ul class="formas_contacto">
                     <h3>Formas de cantactarnos de forma inmediata:</h3>
-                    <li>Correo electrónico</li>
-                    <li>Número de telefono</li>
-                    <li>Whatsapp</li>
-                    <li>Direccion</li>
-                    <li></li>
+                    li>Email: alexruizdela@gmail.com</li>
+                    <li>Teléfono: 609160433</li>
+                    <li>Whatsapp: 609160433</li>
 
                 </ul>
 
@@ -129,16 +94,12 @@
                 <h3>Reseñas Anteriores:</h3>
                 <ul class="res_ante">
                     <button onclick="ver_res()">Ver Reseñas</button>
-                    <div class="caja_reses" id="caja_reses">
-                        
-
-                        
+                    <div class="caja_reses" id="caja_reses">          
                     </div>
 
                 </ul>
             </div>
         </div>
-
-        <script src="script.js"></script>
+        <script src="javascripts/script.js"></script>
     </body>
 </html>

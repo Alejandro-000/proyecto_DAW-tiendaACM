@@ -1,0 +1,227 @@
+// inicio.hbs y tienda.hbs
+    // inicio.hbs
+body 
+    background: lightblue 
+    margin: 0 
+    padding: 0 
+ 
+.navbar 
+    display: flex 
+    margin: 0 
+ 
+/*.logo 
+    width: 20% 
+    height: 5vh 
+ */
+.logotipo 
+    margin-top: 5px 
+    width: 100px 
+    height: 90px 
+ 
+.menu 
+    display: flex 
+    align-items: center 
+    padding: 5px 10px 
+ 
+.navegacion 
+    display: flex 
+ 
+ul 
+    list-style: none 
+ 
+li 
+    font-size: 23px 
+    margin-left: 10px 
+    margin-right: 10px 
+ 
+.menu a 
+    text-decoration: none 
+    color: lightgrey 
+ 
+/* clases asociadas a el cuerpo de la pagina de inicio */
+.cuerpo_inicio 
+    margin-top: 30px 
+    align-items: center 
+    text-align: center 
+    justify-content: center 
+    
+ 
+.servicios 
+    display: flex 
+    justify-content: center 
+    margin: 10px 
+ 
+.servicio 
+    width: 33% 
+    margin: 5px 10px 
+    padding: 10px 10px 
+    border: solid 2px 
+    /* background: lightgrey  */
+    background: darkgrey 
+    color: rgb(0, 100, 100)  /* color provisional*/
+ 
+    img 
+        height: 160px 
+    
+    h3 
+        font-size: 20px 
+        letter-spacing: .7px 
+ 
+    p 
+        color: lightgoldenrodyellow 
+        font-size: 17px 
+        letter-spacing: 1px 
+ 
+    //  tienda.hbs
+
+body 
+    background: lightblue 
+    margin: 0 
+    padding: 0 
+ 
+.navbar 
+    background: darkcyan 
+    margin: 0 
+ 
+.logo 
+    width: 20% 
+    height: 5vh 
+ 
+/* clase de la imagen del logotipo de la empresa o tienda */
+.logotipo 
+    width: 100px 
+    height: 100px 
+ 
+.menu 
+    display: flex 
+    align-items: center 
+    padding: 5px 10px 
+ 
+.navegacion 
+    display: flex 
+ 
+.search 
+    border-radius: 25px 
+    width: 100% 
+    background: rgb(4, 168, 86) 
+    color: white 
+    font-size: 20px 
+ 
+.recuadro 
+    display: flex 
+    align-items: center 
+ 
+.search input 
+    width: 47% 
+    font-size: 19px 
+    border-radius: 15px 
+    padding:5px 10px 
+    margin: 20px 80px 20px 170px    
+ 
+.buscar 
+    font-size: 27px 
+    border: none 
+    background:rgb(4, 168, 86) 
+    color: white 
+ 
+.cuerpo 
+    display: flex 
+    
+ 
+ul 
+    list-style: none 
+    justify-content: space-around 
+    align-items: center 
+    text-align: center 
+    width: 100% 
+
+ 
+a 
+    color: silver 
+    font-weight: bold 
+    font-size: 20px 
+ 
+.cargar 
+    border: solid 0.5px 
+    border-radius: 4px 
+    font-size: 20px 
+    font-weight: bold 
+    width: 10rem 
+    height: 3rem 
+ 
+/* #desplegable 
+    border: 0px 
+    background: white 
+  */
+
+/* Nota: 
+    si modificamos el width de listaGenero, tambien debemos
+    adaptar el width de listaProd, por eso los he puesto juntos
+    AÑADIR VERSION RESPONSIVE, HAY QUE ARREGLAR COMO SE VEN LOS PRODUCTOS EN PANTALLA COMPLETA
+*/
+
+.listaGenero 
+    width: 20% 
+ 
+.listaProd 
+    display: flex 
+    flex-wrap: wrap 
+    align-items: center 
+    width: 70% 
+    /* width: 55%  responsive para menos de 720px */
+    /* width: 70%  responsive para mas de 720px */
+ 
+.producto 
+    border: solid 2px black 
+    flex-direction: column 
+    align-items: center 
+    justify-content: center 
+    text-align: center 
+    width: 33% 
+    /* width: 33%  responsive para 720px o menos */
+    /* width: 28%  responsive para mas de 720px */
+    height: auto 
+    height: 45vh 
+    /* height: 40vh  responsive para 720px o menos */
+    /* height: 30vh  responsive para mas de 720px */
+    margin: 5px 10px 15px 
+    padding: 10px 0px 
+ 
+.carro 
+    /* position: absolute  */
+    position:static 
+    /* top: -50vh  */
+ 
+.producto img 
+    width: 160px 
+    height: 140px 
+ 
+.producto .icono 
+    width: 30px 
+    height: 30px 
+    position: absolute 
+    margin-top: 320px 
+    cursor: pointer 
+    border: solid 1px 
+ 
+/* .producto .decrip 
+    padding-bottom: 90px 
+  */
+.menuOpcional 
+    display: none 
+    position: absolute 
+    top: 15rem 
+    right: 3rem 
+    border: solid 1px 
+    background: lightsalmon 
+ 
+.opciones 
+    text-align: left 
+    align-items: center 
+    justify-content: space-between 
+    margin-left: -10px 
+    margin-right: 15px 
+ 
+.opciones label 
+    display: block 
+ 

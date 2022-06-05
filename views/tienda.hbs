@@ -7,32 +7,7 @@
             
             */
 
-            body{
-                background: lightblue;
-                margin: 0;
-                padding: 0;
-            }
-            .navbar{
-                background: darkcyan;
-                margin: 0;
-            }
-            .logo{
-                width: 20%;
-                height: 5vh;
-            }
-            /* clase de la imagen del logotipo de la empresa o tienda */
-            .logotipo{
-                width: 100px;
-                height: 100px;
-            }
-            .menu{
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-            }
-            .navegacion{
-                display: flex;
-            }
+           
             .search{
                 border-radius: 25px;
                 width: 100%;
@@ -119,11 +94,7 @@
                 margin: 5px 10px 15px;
                 padding: 10px 0px;
             }
-            .carro{
-                /* position: absolute; */
-                position:static;
-                /* top: -50vh; */
-            }
+            
             .producto img{
                 width: 160px;
                 height: 140px;
@@ -162,18 +133,17 @@
 
     </head>
     <body>
-        <div class="navbar" style="background: darkcyan;">
+        <div class="navbar">
             <div class="logo">
-                <img src="" alt="falta logo" class="logotipo">
+                <img src="images/logo.png" alt="falta logo" class="logotipo">
             </div>
             <div class="menu">
                 <ul class="navegacion">
                     <li><a href="inicio">INICIO</a></li>
-                    <li><a href="tienda">TIENDA</a></li>
                     <li><a href="vender">VENDER</a></li>
                     <li><a href="registro">REGISTRARSE</a></li>
                     <li><a href="ini_ses">INICIAR SESION</a></li>
-                    <li><a href="asistencia">SOPORTE</a></li>
+                    <li><a href="soporte">SOPORTE</a></li>
                     <li><a href="contacto">CONTACTO</a></li>
                 </ul>
             </div>
@@ -186,49 +156,58 @@
             </div>
         </div>
         
-        <button class="cargar" onclick="vermenu()">Ver Menú</button>
+        <button class="cargar" onclick="vermenu()">Ver Menú de ayuda</button>
         <div class="cuerpo">
             <div class="izquierda listaGenero" style="border: solid 2px;">
                 <div style="margin: 10px;">
-                    <summary>Torres
-                        <select id="">
-                            <option value="0">equipos</option>
-                            <option value="1">componentes</option>
+                    <h2>Filtrar Productos</h2>
+                        <select id="filtro_eq_com" onchange="filtrar()">
+                            <option value="equipos">equipos</option>
+                            <option value="comp">componentes</option>
                         </select>
-                </summary>
-                    <summary>Portatiles
-                        <select id="">
-                            <option value="0">equipos</option>
-                            <option value="1">componentes</option>
+                        <p></p>
+                        <select id="filtro_comps" style="display: none" onchange="filtrarComp()">
+                            <option value="placa_base">Placa Base</option>
+                            <option value="procesador">Procesador</option>
+                            <option value="RAM">Memoria RAM</option>
+                            <option value="fuente">Fuente de alimentación</option>
+                            <option value="HDD">Disco Duro HDD</option>
+                            <option value="SSD">Disco Duro SSD</opti>
+                            <option value="grafica">Tarjeta Gráfica</option>
+                            <option value="carcasa">Carcasa</option>
+                            <option value="CD">Lector CD</option>
+                            <option value="ventilador">Ventilador Auxiliar</option>
+                            <option value="pantalla">Pantalla</option>
+                            <option value="raton">Ratón</option>
                         </select>
-                    </summary>
+                        <p></p>
                 </div>
             </div>
             <div class="medio listaProd" id="listaProd" style="border: solid 2px;">
             <!-- sustituir boton y codigo java por bucle for en hbs -->
-                <button id="carro" class="carro" onclick="prueba()">Añadir al carro</button>
+                {{!-- <button id="carro" class="carro" onclick="prueba()">Añadir al carro</button> --}}
                 <!-- Añadir el evento del boton añadir al carro dentro de las imagenes tipo icono dentro del div del producto -->
             </div>
             <div class="derecha menuOpcional" id="menuOpcional" style="border: solid 2px;">
                 <ul class="opciones" id="lista"><h3>Componentes</h3>
-                    <label><input type="checkbox">Placa Base</label>
-                    <label><input type="checkbox">Procesador</label>
-                    <label><input type="checkbox">Memoria RAM</label>
-                    <label><input type="checkbox">Fuente de alimentación</label>
-                    <label><input type="checkbox">Disco Duro HDD</label>
-                    <label><input type="checkbox">Disco Duro SSD</label>
-                    <label><input type="checkbox">Tarjeta Gráfica</label>
-                    <label><input type="checkbox">Carcasa</label>
-                    <label><input type="checkbox">Lector CD (opcional)</label>
-                    <label><input type="checkbox">Ventilador Auxiliar (opcional)</label>
-                    <label><input type="checkbox">Pantalla (solo torre)</label>
-                    <label><input type="checkbox">Ratón (solo torre)</label>
+                    <label><input type="checkbox" id="placa_base" disabled>Placa Base</label>
+                    <label><input type="checkbox" id="procesador" disabled>Procesador</label>
+                    <label><input type="checkbox" id="RAM" disabled>Memoria RAM</label>
+                    <label><input type="checkbox" id="fuente" disabled>Fuente de alimentación</label>
+                    <label><input type="checkbox" id="HDD" disabled>Disco Duro HDD</label>
+                    <label><input type="checkbox" id="SSD" disabled>Disco Duro SSD</label>
+                    <label><input type="checkbox" id="grafica" disabled>Tarjeta Gráfica</label>
+                    <label><input type="checkbox" id="carcasa" disabled>Carcasa</label>
+                    <label><input type="checkbox" id="CD" disabled>Lector CD (opcional)</label>
+                    <label><input type="checkbox" id="ventilador" disabled>Ventilador Auxiliar (opcional)</label>
+                    <label><input type="checkbox" id="pantalla" disabled>Pantalla (solo torre)</label>
+                    <label><input type="checkbox" id="raton" disabled>Ratón (solo torre)</label>
                 </ul>
             </div>
         </div>
 
-        <script src="script.js"></script>
-        <script src="buscar.js"></script>
+        <script src="javascripts/script.js"></script>
+        <script src="javascripts/buscar.js"></script>
         
     </body>
 </html>

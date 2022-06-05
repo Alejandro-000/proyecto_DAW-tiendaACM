@@ -1,10 +1,10 @@
 <html>
     <head>
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <style>
             /* recordatorio:
             todos los tamaños width y height deben ser adaptado para ser responsive,
             tener en cuenta eso a la hora de cambiar el tamaño de la ventana o pantalla
-            
             */
 
             body{
@@ -136,9 +136,7 @@
                 cursor: pointer;
                 border: solid 1px;
             }
-            /* .producto .decrip{
-                padding-bottom: 90px;
-            } */
+            
             .menuOpcional{
                 display: none;
                 position: absolute;
@@ -156,6 +154,44 @@
             }
             .opciones label{
                 display: block;
+            }
+            .menu_compra{
+                border: solid 2px black;
+                width: 80%;
+                display: flex;
+            }
+            .foto{
+                margin: 10px 20px;
+                padding: 15px;
+                width: 330px;
+                height: 400px;
+                border: solid 1px black;
+            }
+            .datos{
+                margin-top: 10px;
+            }
+            .contador{
+                display: flex;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 20px 0px;
+                padding: 0px 40px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .contador input{
+                text-align: center;
+                background: black;
+                color: white;
+                font-size: 30px;
+                padding-left: 10px;
+                width: 80px;
+                margin: 0px 10px;
+                initial-value: 2;
+            }
+            .contador h1{
+                cursor: pointer;
             }
             
         </style>
@@ -185,47 +221,23 @@
                 <button class="buscar" onclick="buscando()">Buscar</button>
             </div>
         </div>
-        <!-- <button class="cargar" onclick="generar()">Cargar Todo</button> -->
-        <!-- <button class="cargar" onclick="vermenu(), comprobaciones()">Ver Menú de ayuda</button> -->
-        
-        <button class="cargar" onclick="vermenu(), comprobaciones()">Ver Menú de ayuda</button>
+        <button class="cargar" onclick="vermenu(), comprobaciones()">Ver Menú</button>
         <div class="cuerpo">
             <div class="izquierda listaGenero" style="border: solid 2px;">
                 <div style="margin: 10px;">
-                    <h2>Filtrar Productos</h2>
-                        <select id="filtro_eq_com" onchange="filtrar()">
-                            <option value="equipos">equipos</option>
-                            <option value="comp">componentes</option>
+                    <summary>Torres
+                        <select id="">
+                            <option value="0">equipos</option>
+                            <option value="1">componentes</option>
                         </select>
-                        <p></p>
-                        <select id="filtro_comps" style="display: none" onchange="filtrarComp()">
-                            <option value="placa_base">Placa Base</option>
-                            <option value="procesador">Procesador</option>
-                            <option value="RAM">Memoria RAM</option>
-                            <option value="fuente">Fuente de alimentación</option>
-                            <option value="HDD">Disco Duro HDD</option>
-                            <option value="SSD">Disco Duro SSD</opti>
-                            <option value="grafica">Tarjeta Gráfica</option>
-                            <option value="carcasa">Carcasa</option>
-                            <option value="CD">Lector CD</option>
-                            <option value="ventilador">Ventilador Auxiliar</option>
-                            <option value="pantalla">Pantalla</option>
-                            <option value="raton">Ratón</option>
+                </summary>
+                    <summary>Portatiles
+                        <select id="">
+                            <option value="0">equipos</option>
+                            <option value="1">componentes</option>
                         </select>
-                        <p></p>
-                    <!-- <h2>Portatiles</h2>
-                        <select id="filtra_portatil" onchange="filtrar()">
-                            <option value="equipos">equipos</option>
-                            <option value="comp">componentes</option>
-                        </select> -->
-                    
+                    </summary>
                 </div>
-            </div>
-            <div class="medio listaProd" id="listaProd" style="border: solid 2px;">
-
-            <!-- sustituir boton y codigo java por bucle for en hbs -->
-                <!-- <button id="carro" class="carro" onclick="prueba()">Añadir al carro</button> -->
-                <!-- Añadir el evento del boton añadir al carro dentro de las imagenes tipo icono dentro del div del producto -->
             </div>
             <div class="derecha menuOpcional" id="menuOpcional" style="border: solid 2px;">
                 <ul class="opciones" id="lista"><h3>Componentes</h3>
@@ -243,10 +255,26 @@
                     <label><input type="checkbox" id="raton">Ratón (solo torre)</label>
                 </ul>
             </div>
+            <div class="menu_compra" onmouseover="comprobaciones()">
+                <div class="foto">
+                    <img src="#" alt="foto ampliada">
+                </div>
+                <div class="datos">
+                    <h3>Nombre del producto</h3>
+                    <h3>Precio del producto</h3>
+                    <p>Descripcion del producto</p>
+                    <p></p>
+                    <div class="contador">
+                        <h1 onclick="bajar()">-</h1>
+                        <input type="number" id="cantidad" value="1">
+                        <h1 onclick="subir()">+</h1>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <script src="script.js"></script>
         <script src="buscar.js"></script>
-        
     </body>
 </html>
