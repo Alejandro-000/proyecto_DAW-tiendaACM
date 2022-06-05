@@ -7,4 +7,5 @@
 /routes/*a.js
 
 /baseDatos/*BD.js
-/lib
+/lib/*t.js
+/lib/helpers.js

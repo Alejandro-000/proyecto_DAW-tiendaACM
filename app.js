@@ -61,11 +61,11 @@ var usersRouter = require('./routes/users')
 // var authenticacionRouter = require('./routes/authenticacion');
 // var linksRouter = require('./routes/links');
 
-var navegacionRouter = require('./routes/index');
-var asistenciaRouter = require('./routes/asistencia');
-var sesionRouter = require('./routes/index');
-var transaccionRouter = require('./routes/transaccion');
-var tiendaRouter = require('./routes/index');
+// var navegacionRouter = require('./routes/index');
+// var asistenciaRouter = require('./routes/asistencia');
+// var sesionRouter = require('./routes/index');
+// var transaccionRouter = require('./routes/transaccion');
+// var tiendaRouter = require('./routes/index');
 
 var app = express();
 
@@ -77,7 +77,7 @@ app.engine('.hbs', engine({
   layoutsDir: path.join(app.get('views'), 'layouts'),
   partialsDir: path.join(app.get('views'), 'partials'),
   extname: '.hbs',
-  helpers: require('./lib/handlebars')
+  //helpers: require('./lib/handlebars')
 }));
 
 app.set('view engine', 'hbs');
@@ -94,7 +94,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////// componentes de prueba
 // app.use('/authentication', authenticationRouter);
 // app.use('/links', linksRouter);
 //////////////////////////////////////////////////////////
