@@ -84,33 +84,44 @@ SE CARGA LA PAGINA ESTE MÉTODO DA ERROR PORQUE SE CARGA DESPUÉS QUE EL HTML
 */
 
 comprobaciones = () => {
-    setTimeout(() => {
-        /*
-        comprobacion de los elementos dentro del carro, para comprobar 
-        que productos estan en el carro y son esenciales para montar un
-        ordenador, de esta forma cuando el usuario quiera comprobar
-        los productos que necesita sabrá cuales tiene
-        */
+    try{
+        setTimeout(() => {
+            /*
+            comprobacion de los elementos dentro del carro, para comprobar 
+            que productos estan en el carro y son esenciales para montar un
+            ordenador, de esta forma cuando el usuario quiera comprobar
+            los productos que necesita sabrá cuales tiene
+            */
 
-        for (i=0 ; i<lista_compra.length ; i++) { // bucle para recorrer la lista de productos que tiene el cliente
-            for (j=0 ; j<tiposProductos.length ; j++) { //bucle para recorrer todos los tipos de productos del menu opcional
-                if (lista_compra[i].tipo_comp == tiposProductos[j]) { //si el producto de la lista del cliente coincide con el tipo de producto de la lista se cumple condicion
-                    //console.log('un producto de la lista de la compra es del tipo: '+tiposProductos[j])
-                    var checkeado = document.getElementById(tiposProductos[j])
-                    console.log(checkeado)
-                    checkeado.setAttribute('checked','')
-                    
-                    // checkeado.checked = 'checked'//('checked','')
-                } else {
-                    console.log('no hay productos de los básicos')
+            for (i=0 ; i<lista_compra.length ; i++) { // bucle para recorrer la lista de productos que tiene el cliente
+                for (j=0 ; j<tiposProductos.length ; j++) { //bucle para recorrer todos los tipos de productos del menu opcional
+                    if (lista_compra[i].tipo_comp == tiposProductos[j]) { //si el producto de la lista del cliente coincide con el tipo de producto de la lista se cumple condicion
+                        //console.log('un producto de la lista de la compra es del tipo: '+tiposProductos[j])
+                        var checkeado = document.getElementById(tiposProductos[j])
+                        console.log(checkeado)
+                        try{
+                            checkeado.setAttribute('checked','')
+                        } catch (e){
+                            console.log('se intenta asignar un atributo pero da error')
+                            console.log(e)
+                        }
+
+                        
+                        // checkeado.checked = 'checked'//('checked','')
+                    } else {
+                        console.log('no hay productos de los básicos')
+                    }
+                // if (SELECT tipo FROM componentes WHERE tipo=tipo_comp;) {
+                //     const check = document.getElementById(tipo)
+                //     check.setAttribute('checked')
+                // }
                 }
-            // if (SELECT tipo FROM componentes WHERE tipo=tipo_comp;) {
-            //     const check = document.getElementById(tipo)
-            //     check.setAttribute('checked')
-            // }
             }
-        }
-    }, 5000);
+        }, 5000);
+    } catch (e) {
+        console.log('fallo debido a que se intenta asignar un atributo a una etiqueta con un id que no existe')
+        console.log(e)
+    }
 
 }
 

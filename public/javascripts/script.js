@@ -126,7 +126,7 @@ function addeventos(){
 try{
     document.addEventListener('DOMContentLoaded', generar, true)
 } catch (e) {
-    console.log('fallo debido a que se ejecuta una funcion por defecto en la ejecucion de la pagina, la cual puede dar errores, el error está explicado en la ejecucion de la funcion')
+    console.log('fallo debido a que se ejecuta una funcion por defecto en la ejecucion de la pagina, la cual puede dar errores, el error está explicado en la ejecucion de la funcion.')
     console.log(e)
 }
 // document.addEventListener('DOMContentLoaded', comprobaciones, true)
