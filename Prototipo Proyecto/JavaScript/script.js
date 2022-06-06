@@ -5,7 +5,6 @@ const confirmaciones = [otromenu]
 var usuario_registrado = null //posteriormente cambiar por variable dependiente de la base de datos
 var sesion_iniciada = null //en principio puede quedarse asi, per hay que comprobar que funciona a la perfección
 // en case de cambiar de fichero js devolver el valor de sesion_iniciada para evitar fallos
-// usuario añadido por el servidor para probar los inicios de sesion
 const usuarios = [
     {
         sesion_iniciada: false,
@@ -18,6 +17,33 @@ const usuarios = [
 ]
 // usuarios = [0: {nom_ape: alejandro}]
 // import todosProductos from 'buscar'
+/* var todosProductos = [
+    {
+        foto: '',
+        tipo: 'placa_base',
+        formato: 'torre',
+        nombre: 'Placa Base modelo EJ253',
+        precio: 125,
+        descripcion: 'componente esencia para trabajar con un ordenador, sin este componente el resto del ordenador es inutil'
+    },
+    {
+        foto: '',
+        tipo: 'procesador',
+        formato: 'protatil',
+        nombre: 'Procesador Intel Core 7',
+        precio: 270,
+        descripcion: 'procesador con 4 nucleos de procesamiento, potencia de 3.8GHz'
+    },
+    {
+        foto: '',
+        tipo: 'raton',
+        formato: 'portatil',
+        nombre: 'Ratón inalhámbrico',
+        precio: 20,
+        descripcion: 'raton inalhámbrico con puerto USB 3.0, marca inditech'
+    }
+] */
+
 var listaCompra = []
 
 
@@ -55,11 +81,8 @@ generar = () => {
                 const boton = document.createElement('input')
                 // añadiremos un boton cuando se este cargando la pagina, dicho boton tendra su funcion correspondiente
                 div.className = "producto"
-                foto.alt = 'sin foto'
-                foto.setAttribute('src', todosProductos[i].foto)
-                foto.id = 'ima_prod'
-                
-                // foto.src = todosProdcutos[i].foto
+                foto.alt = 'sin foto '
+                boton.href="productos.html"
                 
                 boton.value= "comprar"//+todosProductos[i].tipo_comp
                 
@@ -90,14 +113,16 @@ que hemos añadido a su vez añade otro evento, el primer click añadira el segu
 vez, por lo tanto lo inteligente seria añadir los 2 eventos desde el principio para evitar problemas.
 */
 
+// funcion en la que se indica que va a hacer el boton dentro del recuadro del producto dentro de tienda.html
 function compra(){
     // botones.addEventListener('click', prueba, false)
     console.log(this.placeholder)
 }
+// funcion para añadir eventos, en este caso solo añade la funcion 'compra', pero si hubiera mas eventos para añadir
+// a un mismo objeto los añadiriamos usando esta funcion
 function addeventos(){
     botones = document.getElementById('botonCompra')
     botones.addEventListener('click', compra, false)
-    // botones.addEventListener('click', prueba, false)
 }
 
 try{

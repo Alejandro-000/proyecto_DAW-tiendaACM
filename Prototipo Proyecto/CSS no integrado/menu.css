@@ -1,0 +1,55 @@
+/* Indicar font-family, buscar fuente adecuada para esto */
+body{
+    background: lightblue;
+    margin: 0;
+    padding: 0;
+}
+/* clase que contiene la foto y los enlaces a otras paginas */
+.navbar{
+    display: flex;
+    margin: 0;
+    background: darkcyan;
+}
+/* clase de la caja que contiene el logotipo */
+/*.logo{
+    width: 20%;
+    height: 5vh;
+}*/
+/* clase de la imagen del logotipo de la empresa o tienda */
+.logotipo{
+    margin-top: 5px;
+    width: 100px;
+    height: 90px;
+}
+/* clase que contiene la lista desordenada de los enlaces*/
+.menu{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+/* clase para la lista de los enlaces */
+.navegacion{
+    display: flex;
+    width: 100%;
+    
+}
+ul{
+    list-style: none;
+}
+li{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+/* estilo de los enlaces dentro del menu que es una lista desordenada */
+.menu a{
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 20px;
+}
+/* clases y estilos para inicio.html e inicio.hbs */
+/* clases asociadas a el cuerpo de la pagina de inicio */
+
+a{
+    font-weight: bold;
+}

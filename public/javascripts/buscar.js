@@ -4,6 +4,7 @@
 var tiposProductos = ['placa_base','procesador','pantalla','raton','RAM','teclado','CD','HDD','SSD','ventilador','carcasa','fuente','grafica']
 
 //var lista_compra = []
+// lista de compra del cliente, para pruebas
 var lista_compra = [
     {
         foto: '',
@@ -25,37 +26,221 @@ var lista_compra = [
 
 var todosProductos = [
     {
-        foto: '',
+        foto: 'https://ae01.alicdn.com/kf/H40d965fb06b84e1d805015e865a20883F/Placa-base-X79-USB2-0-PCI-E-16X-LGA2011-M-ATX-X79M-S-2-0-NVME.jpg_Q90.jpg_.webp',
         tipo_comp: 'placa_base',
         formato: 'torre',
-        nombre: 'Placa Base modelo EJ253',
-        precio: 125,
-        descripcion: 'componente esencia para trabajar con un ordenador, sin este componente el resto del ordenador es inutil'
+        nombre: 'Placa base X79',
+        precio: 58.63,
+        descripcion: 'Placa base X79 USB2.0 PCI-E 16X LGA2011 M ATX X79M-S 2,0, NVME M.2 SSD, compatible con memoria REG ECC y procesador Xeon E5',
+        marca: 'ATX'
     },
     {
-        foto: '',
+        foto: 'https://ae01.alicdn.com/kf/Ha174c859245548b1b249d5c3b020e409S/Placa-base-de-ordenador-port-til-para-ASUS-C15M-Celeron-N2940-Notebook-69N0CNMAYB02-REV-2-1.jpg_Q90.jpg_.webp',
+        tipo_comp: 'placa_base',
+        formato: 'portatil',
+        nombre: 'placa base asus celeron',
+        precio: 148.81,
+        descripcion: 'Placa base de ordenador portátil para ASUS C15M Celeron N2940 Notebook, 69N0CNMAYB02 REV.2.1 DDR3',
+        marca: 'ASUS'
+    },
+        {
+        foto: 'https://ae01.alicdn.com/kf/H679c75f7b16e4a9ebb3d88baec31f32dC/Lntel-procesador-de-ordenador-port-til-Original-Core-i7-820QM-i7-840QM-de-1-73-GHz.jpg_Q90.jpg_.webp',
         tipo_comp: 'procesador',
-        formato: 'torre',
-        nombre: 'Procesador Intel Core 7',
-        precio: 270,
-        descripcion: 'procesador con 4 nucleos de procesamiento, potencia de 3.8GHz'
+        formato: 'portatil',
+        nombre: 'Lntel-procesador de ordenador portátil Original Core i7',
+        precio: 28.19,
+        descripcion: 'Lntel-procesador de ordenador portátil Original Core i7 820QM, i7-840QM de 1,73 GHz Quad-Core i7 820Q PGA988 SLBLX, CPU móvil',
+        marca: ''
     },
     {
-        foto: '',
-        tipo_comp: 'pantalla',
+        foto: 'https://img.pccomponentes.com/articles/35/357683/1291-revoltec-rs020-ventilador-led-para-vga-60mm.jpg',
+        tipo_comp: 'ventilador',
         formato: 'torre',
-        nombre: 'Pantalla plana 30" modelo LG1225E',
-        precio: 95,
-        descripcion: 'pantalla Gaming'
+        nombre: 'Revoltec RS020 Ventilador LED para VGA 60mm',
+        precio: 9.86,
+        descripcion: '',
+        marca: 'revoltec'
+    },
+        {
+        foto: 'https://m.media-amazon.com/images/I/51JF6prx1PS._AC_SL1000_.jpg',
+        tipo_comp: 'ventilador',
+        formato: 'portatil',
+        nombre: 'Cooler Master NotePal CMC3 - Refrigeradores para Ordenador portátil Silent ',
+        precio: 7.5,
+        descripcion: 'Ventilador para Ordenador portátil Silent 200 mm, 700 RPM',
+        marca: ''
     },
     {
-        foto: '',
+        foto: 'https://thumb.pccomponentes.com/w-530-530/articles/24/245154/6.jpg',
+        tipo_comp: 'grafica',
+        formato: 'torre',
+        nombre: 'MSI GeForce GTX 1660 SUPER Ventus XS OC 6GB GDDR6',
+        precio: 315.99,
+        descripcion: '',
+        marca: 'Geoforce GTX'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61XUr0Jj08L._AC_SL1000_.jpg',
+        tipo_comp: 'grafica',
+        formato: 'portatil',
+        nombre: 'Tarjeta gráfica de 1 GB de repuesto para portátil Dell Alienware M15X R1 15.6" Intel Core i7 i5 i3 Gaming Laptop nVidia Geforce GTX 260M GTX260M GDDR3 1 GB, MXM VGA placa de reparación ',
+        precio: 71.99,
+        descripcion: '',
+        marca: 'NVIDIA'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/713crn7sgVL._AC_SL1500_.jpg',
+        tipo_comp: 'CD',
+        formato: 'torre',
+        nombre: 'ASUS DRW-24D5MT - Grabadora de DVD 24X, compatibilidad con M-Disc, encriptación de Disco, Almacenamiento Web Ilimitado (12 Meses), Nero Backitup, E-Green, E-Media ',
+        precio: 24.40,
+        descripcion: '',
+        marca: 'ASUS'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61iADY-Ud+L._AC_SL1500_.jpg',
+        tipo_comp: 'CD',
+        formato: 'portatil',
+        nombre: 'Lector DVD Externo, Grabadora CD DVD Externa con USB 3.0 y Type-C, Disquetera Externa USB CD/DVD-RW Super Drive, Lector CD Externo para Portatil, PC, iMac, Macbook, Windows 11/10/8/XP/Linux/MacOS ',
+        precio: 29.99,
+        descripcion: '',
+        marca: 'QDSYLQ'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61ksP07mIgL._AC_SL1500_.jpg',
+        tipo_comp: 'raton',
+        formato: 'portatil',
+        nombre: 'Logitech M185 Ratón Inalámbrico, 2.4GHz con Mini Receptor USB, Batería de 12 Meses, Seguimiento Óptico con Resolución de 1000 dpi, Ambidiestro, Compatible con PC, Mac, Portátil - Azul ',
+        precio: 12.1,
+        descripcion: '',
+        marca: 'Logitech'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/41s6TYJtWnL._AC_.jpg',
+        tipo_comp: 'raton',
+        formato: 'torre',
+        nombre: 'Ratón Inalámbrico Bluetooth Recargable, Ratón Retroiluminado de 7 Colores con Mini Receptor USB de 2,4 GHz, 1200,1600DPI',
+        precio: 9.68,
+        descripcion: '',
+        marca: 'MME'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61RY7zAgciL._AC_SL1200_.jpg',
+        tipo_comp: 'teclado',
+        formato: 'portatil',
+        nombre: 'IFINGER Teclado Español Compatible para con portátil ASUS X55U 0KNB0-6221SP00 AENJ2P01210 NJ2 Teclas Repuesto',
+        precio: 15.99,
+        descripcion: '',
+        marca: 'IFINGER'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61eaMAoVLOL._AC_SL1500_.jpg',
+        tipo_comp: 'teclado',
+        formato: 'torre',
+        nombre: 'Logitech K120 Teclado con Cable Business para Windows, Tamaño Normal, Resistante a Líquido, Barra Espaciadora Curvada, PC/Portátil, Disposición QWERTY Español, color Negro',
+        precio: 10.99,
+        descripcion: '',
+        marca: 'Logitech'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61ljxuwtg7L._AC_SL1500_.jpg',
+        tipo_comp: 'carcasa',
+        formato: 'torre',
+        nombre: 'PCCASE Caja PC Micro-ATX MPC-27 con Fuente de Alimentación, Soporte para 3 Ventiladores, Rejilla Lateral, Soporte Candado, USB 3.0.',
+        precio: 42.95,
+        descripcion: '',
+        marca: 'PCCASE'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/71Hb40BWP0L._AC_SL1424_.jpg',
+        tipo_comp: 'carcasa',
+        formato: 'portatil',
+        nombre: 'mCover - Carcasa rígida para ASUS Chromebook Flip C214MA de 11,6 Pulgadas (2019, no Compatible con Otros Modelos ASUS Chromebook) Azul',
+        precio: 24.99,
+        descripcion: '',
+        marca: 'mCover'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61zGJo2ZrYL._AC_.jpg',
+        tipo_comp: 'RAM',
+        formato: 'portatil',
+        nombre: 'Komputerbay - Memoria RAM portátil, 16GB (2 x 8GB), DDR3, PC3-10600/10666, 1333MHz, SODIMM (204-Pin)',
+        precio: 49,
+        descripcion: '',
+        marca: 'Komputerbay'
+    },
+    {
+        foto: 'https://m.media-amazon.com/images/I/61BVzUj2EEL._AC_SL1500_.jpg',
         tipo_comp: 'RAM',
         formato: 'torre',
-        nombre: '2 Tarjetas de memoria RAM 16GB. 2x8GB',
-        precio: 200,
-        descripcion: '2 tarjetas de memoria RAM, un total de 16GB cada tarjeta tiene 8GB de memoria',
-    }
+        nombre: 'Lexar 16GB DRAM, DDR4 3200 MHz UDIMM Memoria de Escritorio para Usuarios Cotidianos, Mejora del Rendimiento, 16GB Single ',
+        precio: 73.99,
+        descripcion: '',
+        marca: 'Lexar'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/H679c75f7b16e4a9ebb3d88baec31f32dC/Lntel-procesador-de-ordenador-port-til-Original-Core-i7-820QM-i7-840QM-de-1-73-GHz.jpg_Q90.jpg_.webp',
+        tipo_comp: 'procesador',
+        formato: 'portatil',
+        nombre: 'Intel-procesador de ordenador portátil Original Core i7',
+        precio: 28.19,
+        descripcion: 'Intel-procesador de ordenador portátil Original Core i7 820QM, i7-840QM de 1,73 GHz Quad-Core i7 820Q PGA988 SLBLX, CPU móvil',
+        marca: 'Intel'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/H057b790cecb5427eaa3844e158cbecebw/Toshiba-disco-duro-de-2TB-para-port-til-HDD-2-5-Sata3-Notebook-disco-duro-interno.jpg_Q90.jpg_.webp',
+        tipo_comp: 'HDD',
+        formato: 'portatil',
+        nombre: 'Toshiba-disco duro',
+        precio: 81.34,
+        descripcion: 'Toshiba-disco duro de 2TB para portátil, HDD 2,5, Sata3, Notebook, disco duro interno 2T, Hardisk HD 2,5 RPM',
+        marca: 'Toshiba'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/S4f374029126443ec88a760cae1ef1589f/Sata-III-disco-duro-interno-de-estado-s-lido-1TB-2TB-SSD-2-5-pulgadas-para.jpg_Q90.jpg_.webp',
+        tipo_comp: 'SSD',
+        formato: 'portatil',
+        nombre: 'Sata III',
+        precio: 43.92,
+        descripcion: 'Sata III-disco duro interno de estado sólido, 1TB, 2TB, SSD, 2,5 pulgadas, para ordenador portátil, microordenador y Escritorio',
+        marca: 'SATA'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/H0058dae183e14ede868289c9cb949dd5m/Pantalla-IPS-de-17-3-para-ordenador-port-til-144Hz-B173HAN03-2-B173HAN03-1-B173HAN03-0.jpg_Q90.jpg_.webp',
+        tipo_comp: 'pantalla',
+        formato: 'portatil',
+        nombre: 'Pantalla IPS de 17,3',
+        precio: 148.48,
+        descripcion: 'Pantalla IPS de 17,3 "para ordenador portátil, 144Hz, B173HAN03.2 B173HAN03.1 B173HAN03.0, actualización de 144Hz para videojuegos, pantalla LCD FHD 1920x1080, 40pin eDP',
+        marca: 'IPS'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/H42f8aedd3c6448a6a70ed9acb7eef604l/SAMSUNG-superficie-curva-1800R-de-23-5-pulgadas-se-puede-montar-en-la-pared-sincronizaci-n.jpg_Q90.jpg_.webp',
+        tipo_comp: 'pantalla',
+        formato: 'torre',
+        nombre: 'Pantalla SAMSUNG',
+        precio: 265.71,
+        descripcion: 'SAMSUNG-superficie curva 1800R de 23,5 pulgadas, se puede montar en la pared, sincronización libre, HDMI, interfaz de alta definición, Monitor LCD de ordenador',
+        marca: 'SAMSUNG'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/H97865d84db1d42b9b7999d3f4e36f089I/ASUS-cargador-de-corriente-de-20V-7-5a-150W-TUF-FX505DT-AL095T-FX505DT-EB73-CA.jpg_Q90.jpg_.webp',
+        tipo_comp: 'fuente',
+        formato: 'portatil',
+        nombre: 'ASUS-cargador de corriente de 20V, 7,5a, 150W, TUF, FX505DT-AL095T, FX505DT-EB73, CA',
+        precio: 30.13,
+        descripcion: '',
+        marca: 'ASUS'
+    },
+    {
+        foto: 'https://ae01.alicdn.com/kf/Hd9b141e1e1fa486b91bd95b51cbba3ecD/Fuente-de-alimentaci-n-de-700W-para-PC-ventilador-silencioso-PSU-PFC-vatios-ATX-24-Pines.jpg_Q90.jpg_.webp',
+        tipo_comp: 'fuente',
+        formato: 'torre',
+        nombre: 'PC POWER SUPPLY',
+        precio: 25.96,
+        descripcion: 'Fuente de alimentación de 700W para PC, ventilador silencioso, PSU, PFC, vatios, ATX, 24 Pines, 12CM, 80 + oro',
+        marca: ''
+    },
 ]
 
 var palabra = ''

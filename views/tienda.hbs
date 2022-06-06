@@ -128,6 +128,12 @@
             .opciones label{
                 display: block;
             }
+            #filtro_comps{
+                style="display: none"
+            }
+            #ima_prod{
+                border: solid 1px;
+            }
             
         </style>
 
@@ -166,7 +172,8 @@
                             <option value="comp">componentes</option>
                         </select>
                         <p></p>
-                        <select id="filtro_comps" style="display: none" onchange="filtrarComp()">
+                        {{!-- El filtro se hace mediante javascript, pero como no esta acabado se indica por console y no por pantalla --}}
+                        <select id="filtro_comps" onchange="filtrarComp()">
                             <option value="placa_base">Placa Base</option>
                             <option value="procesador">Procesador</option>
                             <option value="RAM">Memoria RAM</option>
@@ -184,9 +191,7 @@
                 </div>
             </div>
             <div class="medio listaProd" id="listaProd">
-            <!-- sustituir boton y codigo java por bucle for en hbs -->
-                {{!-- <button id="carro" class="carro" onclick="prueba()">Añadir al carro</button> --}}
-                <!-- Añadir el evento del boton añadir al carro dentro de las imagenes tipo icono dentro del div del producto -->
+                {{!-- La idea principal es rellenar este espacion con una consulta, pero por ahora se rellena usando javascript --}}
             </div>
             <div class="derecha menuOpcional" id="menuOpcional">
                 <ul class="opciones" id="lista"><h3>Componentes</h3>

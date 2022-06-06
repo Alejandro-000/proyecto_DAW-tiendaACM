@@ -1,6 +1,6 @@
 <html>
     <head>
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="../CSS no integrado/menu.css">
         <style>
             /* recordatorio:
             todos los tamaños width y height deben ser adaptado para ser responsive,
@@ -49,19 +49,7 @@
                 font-weight: bold;
                 font-size: 20px;
             }
-            .cargar{
-                border: solid 0.5px;
-                border-radius: 4px;
-                font-size: 20px;
-                font-weight: bold;
-                width: 10rem;
-                height: 3rem;
-            }
-            /* #desplegable{
-                border: 0px;
-                background: white;
-            } */
-
+            
             /* Nota:
             si modificamos el width de listaGenero, tambien debemos
             adaptar el width de listaProd, por eso los he puesto juntos
@@ -138,18 +126,22 @@
             .foto{
                 margin: 10px 20px;
                 padding: 15px;
-                width: 330px;
+                width: 310px;
                 height: 400px;
-                border: solid 1px black;
+                margin-right: 2.5rem;
+            }
+            img{
+                width: 300px;
             }
             .datos{
                 margin-top: 10px;
+                
             }
             .contador{
                 display: flex;
                 font-size: 20px;
                 font-weight: bold;
-                margin: 20px 0px;
+                margin: 20px -10px;
                 padding: 0px 40px;
                 text-align: center;
                 align-items: center;
@@ -168,6 +160,11 @@
             .contador h1{
                 cursor: pointer;
             }
+            .comprar{
+                margin-left: .5rem;
+                font-size: 20px;
+            }
+            
             
         </style>
 
@@ -182,35 +179,36 @@
                     <li><a href="inicio">INICIO</a></li>
                     <li><a href="tienda">TIENDA</a></li>
                     <li><a href="vender">VENDER</a></li>
-                    <li><a href="ini_ses">INICIAR SESION</a></li>
                     <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
                     <li><a href="soporte">SOPORTE</a></li>
                     <li><a href="contacto">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
-        <div class="cuerpo">
+        <form action="" method="post" class="cuerpo">
             <div class="izquierda listaGenero"></div>
             <div class="menu_compra">
                 <div class="foto">
-                    <img src="#" alt="foto ampliada">
+                    <img src="images/placa_base_torr.jpg" alt="foto ampliada">
                 </div>
                 <div class="datos">
                     <h3>Nombre del producto</h3>
                     <h3>Precio del producto</h3>
-                    <p>Descripcion del producto</p>
+                    <p>Descripción del producto</p>
                     <p></p>
                     <div class="contador">
                         <h1 onclick="bajar()">-</h1>
                         <input type="number" id="cantidad" value="1">
                         <h1 onclick="subir()">+</h1>
                     </div>
+                    <input type="submit" value="Comprar producto" class="comprar">
                 </div>
             </div>
             
-        </div>
+        </form>
 
-        <script src="javascripts/script.js"></script>
-        <script src="javascripts/buscar.js"></script>
+        <script src="../JavaScript/script.js"></script>
+        <script src="../JavaScript/buscar.js"></script>
     </body>
 </html>

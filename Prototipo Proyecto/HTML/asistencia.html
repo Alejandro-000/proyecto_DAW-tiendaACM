@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS no integrado/menu.css">
+        <style>
+            /* clase para la lista de los enlaces */
+            .navegacion{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            a{
+                color: silver;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            /* clase que contiene todos los elementos dentro de la pagina y que no son el menu de navegacion */
+            .cuerpo_asis{
+                padding: 5px;
+            }
+            .formas_contacto h3{
+                font-size: 21px;
+            }
+            .formas_contacto li{
+                list-style: disc;
+                font-size: 18px;
+                margin-bottom: 10px;
+                margin-left: 25px;
+            }
+            /* clase de la caja que contiene todas las reseñas antiguas */
+            .caja_reses{
+                display: block;
+                align-items: center;
+                margin-left: 20%;
+            }
+            /* clase de la caja que contiene una reseña, es la misma clase para todas las reseñas */
+            .res{
+                display: flex;
+                margin-top: 20px;
+                padding: 15px;
+                width: 70%;
+                align-items: center;
+                border: solid 2px;
+            }
+            /* clase de la caja de comentarios, la cual contiene el texto del coemntario */
+            .comentario{
+                margin: 10px 15px;
+
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar" style="background: darkcyan;">
+            <div class="logo">
+                <img src="fotos/logo.png" class="logotipo" alt="falta logo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <li><a href="inicio.html">INICIO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="vender.html">VENDER</a></li>
+                    <li><a href="registro.html">REGISTRARSE</a></li>
+                    <li><a href="ini_ses.html">INICIAR SESION</a></li>
+                    <li><a href="menu_botones.html">SOPORTE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cuerpo_asis">
+            <div class="asistencia_telematica">
+                <h2>Llamanos ahora</h2>
+                <!-- Estilizar la vista, y plantear como mostrar las formas de contactar 
+                y si mantener los comentarios en la misma ventana o no -->
+                <ul class="formas_contacto">
+                    <h3>Formas de cantactarnos de forma inmediata:</h3>
+                    <li>Email: alexruizdela@gmail.com</li>
+                    <li>Teléfono: 609160433</li>
+                    <li>Whatsapp: 609160433</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

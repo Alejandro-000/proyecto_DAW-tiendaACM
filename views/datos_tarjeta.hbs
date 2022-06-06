@@ -1,0 +1,124 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS no integrado/menu.css">
+        <style>
+            
+            body{
+                
+                text-align:center;
+                color:black;
+            }
+
+            .cuerpo{
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+            }
+
+            p{
+                font-size: 22px;
+                margin-bottom: 50px;
+            }
+
+            .tipo_precio{
+                width: 50%;
+                height: 70%;
+                flex-direction: column;
+            }
+
+            .tipo{
+                margin: 50px;
+            }
+
+            select{
+                margin-left: 30px;
+                padding: 5px;
+            }
+
+            input{
+                margin-left: 30px;
+                padding: 5px;
+            }
+
+            .precio{
+                border: solid black 1px;
+                width: 35%;
+                margin-left: 35%;
+                padding: 15px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                background-color: aliceblue;
+            }
+
+            .datos_tarjeta{
+                width: 33%;
+                text-align: right;
+            }
+
+            .caducidad{
+                width: 185px;
+            }
+
+            .confirmar{
+                background-color: white;
+                color: black;
+                margin-top: 30px;
+                padding: 15px;
+                padding-left: 25px;
+                padding-right: 25px;
+                font-size: 18px;
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="falta logo" class="logotipo">
+            </div>
+            <div class="menu">
+                <ul class="navegacion">
+                    <li><a href="inicio">INCIO</a></li>
+                    <li><a href="tienda">TIENDA</a></li>
+                    <li><a href="vender">VENDER</a></li>
+                    <li><a href="registro">REGISTRARSE</a></li>
+                    <li><a href="ini_ses">INICIAR SESION</a></li>
+                    <li><a href="soporte">SOPORTE</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <form action="" method="post">
+            <div class="cuerpo">
+                <div class="tipo_precio">
+                    <p class="tipo">Tipo de Tarjeta:<select>
+                        <option>Ninguna</option>
+                        <option>VISA</option>
+                        <option>MASTERCARD</option>
+                        </select></p>
+                    
+                    <p class="precio" id="final">Precio Final Compra:<br>X€</p>
+                    
+                </div>
+                <div class="datos_tarjeta">
+                    <p>Titular:<input type="text"></p>
+                    <p>Nº de Tarjeta:<input type="text"></p>
+                    <p>Fecha de Caducidad:<input type="date" class="caducidad"></p>
+                    <p>Codigo de verificación:<input type="text"></p>
+                </div>
+                
+            </div>
+            <input type="submit" value="Confirmar Pago" class="confirmar">
+        </form>
+    </body>
+</html>
+        

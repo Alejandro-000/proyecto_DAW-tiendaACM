@@ -1,14 +1,8 @@
 <html>
     <head>
+        <link rel="stylesheet" href="../CSS no integrado/menu.css">
         <style>
             /* clase para la lista de los enlaces */
-            .navegacion{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                text-align: center;
-                width: 100%;
-            }
             a{
                 color: silver;
                 font-weight: bold;
@@ -54,36 +48,31 @@
 
     </head>
     <body>
-        <div class="navbar" style="background: darkcyan;">
+        <div class="navbar">
             <div class="logo">
-                <img src="images/logo.png" class="logotipo" alt="falta logo">
+                <img src="./fotos/logo.png" class="logotipo" alt="falta logo">
             </div>
             <div class="menu">
                 <ul class="navegacion">
-                    <li><a href="inicio">INICIO</a></li>
-                    <li><a href="tienda">TIENDA</a></li>
-                    <li><a href="registro">REGISTRARSE</a></li>
-                    <li><a href="ini_ses">INICIAR SESION</a></li>
-                    <li><a href="soporte">SOPORTE</a></li>
-                    <li><a href="contacto">CONTACTO</a></li>
+                    <li><a href="inicio.html">INICIO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="registro.html">REGISTRARSE</a></li>
+                    <li><a href="ini_ses.html">INICIAR SESION</a></li>
+                    <li><a href="soporte.html">SOPORTE</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
         <div>
             <div class="cuerpo">
-                {{!-- el action del formulario es para decidir si envia al usuario a alguna pagina o algo así --}}
-                <form action="" method="POST" class="oferta">
+                
+                <div class="oferta">
                     <h2>Ofrece tus propios productos</h2>
                     <p>Nombre</p>
                     <input type="text" name="nombre" autofocus>
                     <p>Tipo de componente</p>
                     <select name="tipo">
                         <option></option>
-                        {{!-- comprobar cual de estas 3 opciones funciona. --}}
-                        {{!-- la opcion 1 consiste en permitir guardar el dato indicando el nombre en la opcion del select --}}
-                        {{!-- <option name="tipo" value="placa_base">Placa base</option> --}}
-                        {{!-- la option 2 consiste en asociar la 'opcion' al nombre del select --}}
-                        {{!-- <option for="tipo" value="placa_base">Placa base</option> --}}
                         <option value="placa_base">Placa base</option>
                         <option value="procesador">Procesador</option>
                         <option value="RAM">Memoria RAM</option>
@@ -115,8 +104,8 @@
                     <p>URL para foto</p>
                     <input type="text" name="foto" placeholder="url de la imagen" autofocus>
                     <p></p>
-                    <input type="submit" value="Enviar" class="envio">
-                </form>
+                    <a href="inicio.html"><input type="submit" value="Enviar" class="envio"></a>
+                </div>
             </div>
         </div>
     </body>
